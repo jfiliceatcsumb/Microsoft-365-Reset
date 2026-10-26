@@ -30,7 +30,7 @@ setopt NONOMATCH
 
 # Script identity
 scriptVersion="3.0.0"
-humanReadableScriptName="Microsoft 365 Reset"
+humanReadableScriptName="Microsoft Office/365 Repair, Reset & Remove"
 scriptName="M365R"
 
 # Dialog presentation defaults
@@ -57,7 +57,7 @@ operationCSV="${5:-}"
 allowAllOperations="${6:-false}"    # self-service requires an allowlist unless explicitly opted in
 
 # Client-side Log
-scriptLog="/var/log/org.churchofjesuschrist.log"
+scriptLog="/var/log/edu.csumb.it.M365Reset.log"
 restartMode="Restart Confirm"
 restartPromptEnabled="true"
 
@@ -196,7 +196,7 @@ operationTitle[reset_teams_force]="Reset Teams (Force Reinstall)"
 operationTitle[reset_autoupdate]="Reset AutoUpdate"
 operationTitle[reset_license]="Reset License Only"
 operationTitle[reset_credentials]="Reset License and Sign-In"
-operationTitle[remove_office]="Completely remove Microsoft 365"
+operationTitle[remove_office]="Completely remove Microsoft Office/365"
 operationTitle[remove_skypeforbusiness]="Remove Skype for Business"
 operationTitle[remove_defender]="Remove Defender"
 operationTitle[remove_acrobat_addin]="Remove Adobe Acrobat Add-in"
@@ -1124,7 +1124,7 @@ function showIntroDialog() {
         --title "${humanReadableScriptName}" \
         --infotext "${scriptVersion}" \
         --messagefont "size=${fontSize}" \
-        --message "This tool _may_ help address Microsoft 365-related issues on this Mac:\n- Repair\n- Reset\n- Remove\n\n**Save your work first:** selected actions quit Microsoft apps without saving, and some actions permanently remove local data.\n\nClick **Continue** to select actions; click **Cancel** to exit." \
+        --message "This tool _may_ help address Microsoft Office/365-related issues on this Mac:\n- Repair\n- Reset\n- Remove\n\n**Save your work first:** selected actions quit Microsoft apps without saving, and some actions permanently remove local data.\n\nClick **Continue** to select actions; click **Cancel** to exit." \
         --icon "${applicationIcon}" \
         --overlayicon "${organizationOverlayiconURL}" \
         --button1text "Continue" \
